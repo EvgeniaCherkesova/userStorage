@@ -1,0 +1,10 @@
+CREATE SEQUENCE IF NOT EXISTS users_id_seq
+    START WITH 1
+    INCREMENT BY 1;
+
+-- Создание таблицы users
+CREATE TABLE IF NOT EXISTS users (
+    id BIGSERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE
+);
